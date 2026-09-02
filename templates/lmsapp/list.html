@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 style="color:  rgb(230, 8, 97);">Library List</h2>
+    <table border="1" cellpadding="20" align="center">
+
+    <tr>
+        <th>student name</th>
+        <th>title</th>
+        <th>quantity </th>
+        <th>author</th>
+        <th>isbn</th>
+        <th>published date</th>
+        <th>Remark</th>
+    </tr>
+    {% for lms in data %}
+    <tr>
+        <td>{{ lms.Student_Name }}</td>
+        <td>{{ lms.Title }}</td>
+        <td>{{ lms.Quantity }}</td>
+        <td>{{ lms.Author }}</td>
+        <td>{{ lms.ISBN }}</td>
+        <td>{{ lms.Published_Date }}</td>
+        <td>
+
+                <a href="/delete/{{ lms.id }}/" onclick="return confirm(' Do you want to delete this library??')">Delete</a>
+            <a href="/update/{{ lms.id }}/">Update</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

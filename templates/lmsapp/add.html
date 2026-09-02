@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 style="color: rgb(3, 3, 212);">Add Student</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>student name</label>
+    <input type="text" name="Student_Name" placeholder="Enter the Student Name"><br><br>
+
+    <label>title</label>
+    <input type="text" name="Title" placeholder="Enter the Title"><br><br>    
+
+    <label>quantity</label>
+    <input type="number" name="Quantity" placeholder="Enter the Quantity"><br><br>  
+    
+    <label>author </label>
+    <input type="text" name="Author" placeholder="Enter the Author"><br><br>    
+
+    <label>isbn</label>
+    <input type="number" name="ISBN" placeholder="Enter the ISBN"><br><br>
+
+    <label>published date</label>
+    <input type="date" name="Published_Date" placeholder="Enter the Published Date"><br><br>
+
+    <button type="submit">Submit</button>
+    
+
+ </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 style="color: rgba(104, 6, 216, 0.682); text-align: center;">Update Library</h2>
+<form method="POST">
+    <table align="center"></table>
+    {% csrf_token %}
+    <label for="">student name</label>
+    <input type="text" name="Student_Name" placeholder="Enter the Name" value="{{ lms.Student_Name}}"><br><br>
+
+    <label for="">title</label>
+    <input type="text" name="Title" placeholder="Enter the Title" value="{{ lms.Title}}"><br><br>    
+
+    <label for="">quantity</label>
+    <input type="number" name="Quantity" placeholder="Enter the Quantity" value="{{ lms.Quantity}}"><br><br>  
+    
+    <label for="">author </label>
+    <input type="text" name="Author" placeholder="Enter the Author" value="{{ lms.Author}}"><br><br>    
+
+    <label for="">isbn</label>
+    <input type="number" name="ISBN" placeholder="Enter the ISBN" value="{{ lms.ISBN}}"><br><br>
+
+    <label for="">published_date</label>
+    <input type="date" name="Published_Date" placeholder="Enter the Published Date" value="{{ lms.Published_Date}}"><br><br>
+
+    <button type="submit">Update library details</details></button>
+</form>
+{% endblock %}
